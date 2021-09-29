@@ -13,14 +13,11 @@ public class Ingredientes {
     }
 
 
-    //get e set
+    //get
     public String getNomeIngrediente() {
         return nomeIngrediente;
     }
 
-    public void setNomeIngrediente(String nomeIngrediente) {
-        this.nomeIngrediente = nomeIngrediente;
-    }
 
     @Override
     public String toString() {

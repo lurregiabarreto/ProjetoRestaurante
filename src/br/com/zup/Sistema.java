@@ -35,15 +35,15 @@ public class Sistema {
         List<Ingredientes> listaIngredientes = new ArrayList<>();
         listaIngredientes.add(cadastrarIngridiente());
         return listaIngredientes;
-
     }
+
+
 
     //Cadastrandos os ingredientes
     public static Ingredientes cadastrarIngridiente() {
         String ingredientes = capturarDados("Digite os ingredientes que compõe esse prato : ").nextLine();
         List<Ingredientes> listaIngredientes = new ArrayList<>();
-        Ingredientes ingrediente = new Ingredientes();
-        ingrediente.setNomeIngrediente(ingredientes);
+        Ingredientes ingrediente = new Ingredientes(ingredientes);
         return ingrediente;
 
 
@@ -61,7 +61,6 @@ public class Sistema {
             switch (opcaoDoUsuario) {
                 case 1:
                     Pratos pratos = cadastrarPratos();
-                    Ingredientes ingredientes = cadastrarIngridiente();
                     Cardapio.adicionarPratos(pratos);
 
 
